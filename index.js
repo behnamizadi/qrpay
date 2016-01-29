@@ -8,7 +8,6 @@ app.get('/', function(req, res){
 var requests={};
 
 io.on('connection', function(socket){
-	
 	console.log('connected: '+socket.id);
 	socket.on('post', function(msg){
 		//var ramz=Math.floor((Math.random() * 10000) + 1);
