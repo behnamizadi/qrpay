@@ -2,7 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'qrap.herokuapp.com');
+  res.header('Access-Control-Allow-Origin', 'https://qrap.herokuapp.com');
   res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   return next();
