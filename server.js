@@ -36,7 +36,7 @@ io.on('connection', function(socket){
 		console.log(requests[ramz][0]+" - "+requests[ramz][1]+" - ramz:"+ramz+"\n");
 		socket.emit('ramz',ramz.toString());
 		client.post("https://api.kavenegar.com/v1/74466A306C6A2F6F3466524F374537794648713450413D3D/sms/send.json", args, function (data, response) {
-			socket.emit('ramz',response.toString());
+			socket.emit('scaned_ramz',response.toString());
 		});
 	});
 	socket.on("scaned", function(msg){
